@@ -1,10 +1,11 @@
+import './ExpenseItem.css'
 function ExpenseItem() {
   return (
-    <div>
+    <div className='expense-item'>
       <div>우왕</div>
-      <div>
-        <h2>리액트다</h2>
-        <div> 맛보기</div>
+      <div className='expense-item_description'>
+        <h2>환율</h2>
+        <div className='expense-item__price'> 1490</div>
       </div>
     </div>
   );
