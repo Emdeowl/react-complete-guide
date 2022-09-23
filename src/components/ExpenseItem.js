@@ -1,10 +1,10 @@
 function ExpenseItem() {
   return (
     <div>
-      <div>Date</div>
+      <div>우왕</div>
       <div>
-        <h2>Title</h2>
-        <div> Amount</div>
+        <h2>리액트다</h2>
+        <div> 맛보기</div>
       </div>
     </div>
   );
