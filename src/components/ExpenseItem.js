@@ -1,9 +1,11 @@
 import './ExpenseItem.css'
-function ExpenseItem(props) {
+import ExpenseDate from './ExpenseDate';
+function Expenses(props) {
+
 
   return (
     <div className='expense-item'>
-      <div>{props.date.toISOString()}</div>
+      <ExpenseDate date={props.date}/>
       <div className='expense-item__description'>
         <h2>{props.title}</h2>
         <div className='expense-item__price'> ${props.amount}</div>
@@ -13,4 +15,4 @@ function ExpenseItem(props) {
 }
 // ()로 묶는 두번째 방법
 
-export default ExpenseItem;
+export default Expenses;
