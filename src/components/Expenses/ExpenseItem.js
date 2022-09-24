@@ -1,9 +1,7 @@
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
-function Expenses(props) {
-
-
+const Expenses = (props) => {
   return (
     <Card className='expense-item'>
       <ExpenseDate date={props.date}/>
@@ -14,6 +12,5 @@ function Expenses(props) {
     </Card>
   );
 }
-// ()로 묶는 두번째 방법
 
 export default Expenses;
