@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
-import './Expense.css';
+import './Expenses.css';
 
 const Expenses = (props) => {
   const [filterYear, setFilterYear] = useState('2022');
