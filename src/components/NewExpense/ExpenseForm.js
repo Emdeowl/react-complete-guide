@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   //     //독립된 State 관리 방법
   const [EnteredTitle, setEnteredTitle] = useState('');
   const [EnteredAmount, setEnteredAmount] = useState('');
@@ -45,14 +45,17 @@ const ExpenseForm = () => {
     //     enteredDate:event.target.value
     // });
   };
+
   const submitHandler = (event) => {
     event.preventDefault();
+
     const expenseData = {
       title: EnteredTitle,
       amount: EnteredAmount,
       date: new Date(EnteredDate),
     };
-    console.log(expenseData);
+    
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
