@@ -30,6 +30,8 @@ const Expenses = (props) => {
     ));
   }
 
+  //JSX에 있던 코드를 변수로 지정하고 if 조건문을 통하여 동적으로 변하게  만듬. 그래서 let 변수를 쓴거
+
   return (
     <div>
       <Card className="expenses">
