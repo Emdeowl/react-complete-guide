@@ -18,6 +18,18 @@ const Expenses = (props) => {
   // filter라는 내장된 메소드를 실행.  true가 되면 반환한다.  그러기위해 return에 조건을 넣어줌
   //expense에 있는 date의 year를 4자리로 받아서 string으로 만든것과 선택된 연도가 같다면~~
 
+  let expenseContent = <p>No expense found</p>;
+  if (filteredExpenses.length > 0) {
+    expenseContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
+
   return (
     <div>
       <Card className="expenses">
@@ -25,17 +37,7 @@ const Expenses = (props) => {
           selected={filterYear}
           onChangeFliter={filterChangeHandler}
         />
-        {filteredExpenses.length ===0 && <p>No expense found</p>}
-        {filteredExpenses.length  >0 (
-          filteredExpenses.map((expense) => (
-            <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}
-              date={expense.date}
-            />
-          ))
-        )}
+        {expenseContent}
       </Card>
     </div>
   );
