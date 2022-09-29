@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
+import Card from '../UI/Card';
 import ExpensesList from './ExpensesList'
 import ExpensesFilter from './ExpensesFilter';
-import Card from '../UI/Card';
+import ExpensesChart from './ExpensesChart';
 import './Expenses.css';
 
 
 const Expenses = (props) => {
-  const [filterYear, setFilterYear] = useState('2020');
+  const [filterYear, setFilterYear] = useState('2022');
 
   const filterChangeHandler = (selectedYear) => {
     setFilterYear(selectedYear);
@@ -20,8 +21,6 @@ const Expenses = (props) => {
   //expense에 있는 date의 year를 4자리로 받아서 string으로 만든것과 선택된 연도가 같다면~~
 
  
- 
-
   return (
     <div>
       <Card className="expenses">
@@ -29,6 +28,7 @@ const Expenses = (props) => {
           selected={filterYear}
           onChangeFliter={filterChangeHandler}
         />
+       <ExpensesChart expenses={filteredExpenses}/>
        <ExpensesList item={filteredExpenses} />
       </Card>
     </div>

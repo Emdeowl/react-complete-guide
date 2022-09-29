@@ -24,6 +24,7 @@ const ExpensesChart = (props) => {
         const expenseMonth = expense.date.getMonth();  // getMonth로 인덱스 0번부터 1월임
         chartDataPoint[expenseMonth].value += expense.amount; // 월별로 금액을 더하여 value에 대입한다.
     }
+   console.log(props);
 
   return <Chart dataPoint={chartDataPoint}/>;
 };
