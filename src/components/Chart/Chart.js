@@ -4,8 +4,8 @@ import Chartbar from './ChartBar';
 import './ChartBar.css';
 
 const Chart = (props) => {
-
-  const totalMaxinum =Math.max( );  //max()는 숫자가 인자로 전달되어야 하지만 현재 객체로 되어있음.
+  const dataPointValues = props.dataPoint.map(dataPoint=>dataPoint.value); //map을 통하여 객체에서 숫자(dataPoint.value)로 새로운 배열을 만든다.
+  const totalMaxinum =Math.max(dataPointValues );  //max()는 숫자가 인자로 전달되어야 하지만 현재 객체로 되어있음.
 
   return (
     <div>
