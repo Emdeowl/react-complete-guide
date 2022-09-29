@@ -3,6 +3,7 @@ import React from 'react';
 import Chart from '../Chart/Chart';
 
 const ExpensesChart = (props) => {
+
   const chartDataPoint = [
     { label: '1월', value: 0 },
     { label: '2월', value: 0 },
@@ -24,7 +25,7 @@ const ExpensesChart = (props) => {
         chartDataPoint[expenseMonth].value += expense.amount; // 월별로 금액을 더하여 value에 대입한다.
     }
 
-  return <Chart />;
+  return <Chart dataPoint={chartDataPoint}/>;
 };
 
 export default ExpensesChart;
